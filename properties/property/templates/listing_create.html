@@ -1,6 +1,25 @@
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type="submit">Submit</button>
-
-<form/>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Listing</title>
+    <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header-title">Create a New Listing</h1>
+    </header>
+    <main class="main-content">
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer class="footer">
+        <p class="footer-text">&copy; 2024 Real Estate Business. All rights reserved.</p>
+    </footer>
+</body>
+</html>
