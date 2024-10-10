@@ -1,10 +1,45 @@
-{%load static%}
+{% load static %}
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="{% static 'myfirst.css' %}">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Business</title>
+    <link rel="stylesheet" href="{% static 'myfirst.css' %}">
+</head>
 <body>
+    <header class="header">
+        <h1 class="header-title">Wallez Properties</h1>
+        <nav class="navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Properties</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content">
+        <section class="featured-properties">
+            <h2 class="section-title">Featured Properties</h2>
+              {% for x in listings%}
+            <div class="property-list">
+              <a href = "{% url 'listing_retrieve' x.id %}" >{{x.title}}</a>
+              <p>{{x.price}}</p>
+              <p>{{x.location}}</p>
+              <p>{{x.bedrooms}}</p>
 
-  <h1>Hello, World!</h1>
-
+                <!-- Property items will be dynamically generated here -->
+            </div>
+            {% endfor %}
+        </section>
+        <section class="why-choose-us">
+            <h2 class="section-title">Why Choose Us?</h2>
+            <p class="description">We provide the best real estate services in the area.</p>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer-text">&copy; 2024 Real Estate Business. All rights reserved.</p>
+    </footer>
 </body>
 </html>
