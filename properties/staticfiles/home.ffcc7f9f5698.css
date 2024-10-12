@@ -1,0 +1,25 @@
+.radio-icon {
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .radio-icon input[type="radio"] {
+    display: none;
+  }
+  
+  .radio-icon i {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #333;
+  }
+  
+  .radio-icon input[type="radio"]:checked + i {
+    color: #007bff;
+  }
+  
+  .property-type-icons, .bedroom-icons, .garage-icons, .bathroom-icons {
+    display: flex;
+    gap: 10px;
+  }
+  

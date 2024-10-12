@@ -1,0 +1,99 @@
+/* contact.css */
+
+/* General styles for the contact page */
+.contact {
+    padding: 60px 0;
+  }
+  
+  .contact-map {
+    margin-bottom: 30px;
+  }
+  
+  .intro-single {
+    padding: 80px 0;
+  }
+  
+  .title-single {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  
+  .title-single-box {
+    border-left: 3px solid #2eca6a;
+    padding-left: 20px;
+  }
+  
+  .breadcrumb-box {
+    margin-bottom: 20px;
+  }
+  
+  .form-a {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-a .form-control {
+    border-radius: 0;
+  }
+  
+  .form-a .form-control-lg {
+    height: 50px;
+  }
+  
+  .btn-a {
+    background-color: #2eca6a;
+    color: #fff;
+    border-radius: 0;
+  }
+  
+  .btn-a:hover {
+    background-color: #26a356;
+  }
+  
+  .icon-box {
+    margin-bottom: 30px;
+  }
+  
+  .icon-box-icon {
+    font-size: 36px;
+    color: #2eca6a;
+  }
+  
+  .icon-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .socials-footer {
+    margin-top: 15px;
+  }
+  
+  .socials-footer .list-inline-item {
+    margin-right: 15px;
+  }
+  
+  .link-one {
+    color: #000;
+    transition: all 0.3s ease;
+  }
+  
+  .link-one:hover {
+    color: #2eca6a;
+  }
+  
+  @media (max-width: 768px) {
+    .intro-single {
+      padding: 60px 0;
+    }
+  
+    .title-single {
+      font-size: 2rem;
+    }
+  
+    .form-a {
+      padding: 20px;
+    }
+  }
+  

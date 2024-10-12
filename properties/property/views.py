@@ -8,6 +8,16 @@ def home(request):
         'listings': listings
     }
     return render(request, 'home.html', context)
+def about(request):
+    return render(request, 'about.html')  # Create a separate template for about page
+def contact(request):
+    return render(request, 'contact.html')  # Create a separate template for contact page
+def properties(request):
+    listings = Listings.objects.all()
+    context = {
+        'listings': listings
+    }
+    return render(request, 'properties.html', context)  # Create a separate template for properties page
 
 def listing_retrieve(request, pk):
     listing = get_object_or_404(Listings, id=pk)  # Use get_object_or_404 for safety
