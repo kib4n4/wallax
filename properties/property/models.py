@@ -7,7 +7,7 @@ class Listings(models.Model):
     price = models.IntegerField()
     description = models.TextField()
     location = models.CharField(max_length=255)
-    image = models.ImageField()
+    image = models.ImageField(upload_to='images/')
     address = models.CharField(max_length=255)
     bedrooms = models.IntegerField()
     bathrooms = models.IntegerField()

@@ -17,11 +17,14 @@
             {% for x in listings %}
             <div class="property-list">
                 <a href="{% url 'listing_retrieve' x.id %}">{{ x.title }}</a>
+                <img src="{{ x.image.url }}" alt="{{ x.title }}">
                 <p>{{ x.price }}</p>
                 <p>{{ x.location }}</p>
                 <p>{{ x.bedrooms }}</p>
             </div>
+            <button>  <a href="{% url 'listing_retrieve' x.id %}">Details</a></button>
             {% endfor %}
+           
         </section>
         <section class="why-choose-us">
             <h2 class="section-title">Why Choose Us?</h2>
