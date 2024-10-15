@@ -17,24 +17,55 @@ body {
   background: linear-gradient(145deg, #3df5cd, #1c695a);
   color: #fff;
   padding: 20px 0;
-  text-align: center;
+}
+
+/* Flexbox container for header logo and navigation */
+.header-container {
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo Section */
+.logo-container {
+  display: flex;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.logo-image {
+  max-width: 150px; /* Adjusted logo size for better balance */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 20px;
+  border-radius: 10px; /* Adds a smooth border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Luxurious shadow effect */
+  transition: transform 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05); /* Slightly enlarges the logo on hover */
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .header-title {
-  font-size: 36px;
-  margin: 0;
-  letter-spacing: 2px;
-}
-
-.navigation {
-  margin-top: 15px;
+  font-size: 40px; /* Adjusted title size */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
 }
 
 .nav-list {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: center;
+  gap: 15px;
 }
 
 .nav-item {
@@ -153,6 +184,15 @@ body {
   .property-item {
       width: calc(50% - 20px);
   }
+
+  .header-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .logo-image {
+      margin-bottom: 15px; /* Add space when logo stacks above nav */
+  }
 }
 
 @media (max-width: 480px) {
@@ -162,6 +202,7 @@ body {
 
   .nav-list {
       flex-direction: column;
+      align-items: center;
   }
 
   .nav-item {

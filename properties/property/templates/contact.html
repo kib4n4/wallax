@@ -1,4 +1,55 @@
 {% extends 'base.html' %}
-{% load static%}
-{% block content%}
-{%endblock%}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'contact.css' %}">
+<div class="contact-us">
+    <h1>Contact Wallez Properties</h1>
+    <p>We'd love to hear from you! Whether you have questions about a property or need help with buying or selling, reach out to us, and we'll get back to you as soon as possible.</p>
+    
+    <div class="contact-grid">
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <h2>Our Contact Information</h2>
+            <ul>
+                <li><strong>Phone:</strong> +123 456 789</li>
+                <li><strong>Email:</strong> info@wallezproperties.com</li>
+                <li><strong>Address:</strong> 123 Real Estate Street, Property City, 12345</li>
+            </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send Us a Message</h2>
+            <form action="{% url 'contact' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+                <button type="submit" class="submit-button">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="map-container">
+        <h2>Find Us Here</h2>
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094477!2d144.95373531531888!3d-37.816279979751776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f1c0f77%3A0x5045675218ceed32!2s123%20Real%20Estate%20Street%2C%20Property%20City%2C%2012345!5e0!3m2!1sen!2sus!4v1638460287398!5m2!1sen!2sus" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</div>
+{% endblock %}

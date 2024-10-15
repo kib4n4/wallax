@@ -1,4 +1,28 @@
 {% extends 'base.html' %}
-{% load static%}
-{% block content%}
-{%endblock%}
+{% load static %}
+{% block content %}
+
+<div class="about-us">
+    <h1>About Wallez Properties</h1>
+    <p>Welcome to Wallez Properties, your trusted partner in real estate. With years of experience in the industry, we specialize in helping you buy, sell, and invest in properties that meet your needs.</p>
+    
+    <h2>Our Mission</h2>
+    <p>At Wallez Properties, our mission is to provide exceptional service and expert guidance to our clients. We believe in building lasting relationships based on trust, integrity, and transparency.</p>
+    
+    <h2>Our Team</h2>
+    <p>Our team of dedicated real estate professionals is committed to understanding your unique requirements. We work tirelessly to ensure that your real estate experience is seamless and successful.</p>
+    
+    <h2>Why Choose Us?</h2>
+    <ul>
+        <li>Expert Knowledge of the Local Market</li>
+        <li>Personalized Service Tailored to Your Needs</li>
+        <li>Comprehensive Marketing Strategies</li>
+        <li>Commitment to Client Satisfaction</li>
+    </ul>
+    
+    <h2>Contact Us</h2>
+    <p>If you have any questions or would like to learn more about our services, please <a href="{% url 'contact' %}">contact us</a> today.</p>
+    
+</div>
+
+{% endblock %}

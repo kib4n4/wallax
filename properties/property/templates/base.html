@@ -9,16 +9,23 @@
     {% block extra_styles %}
     <link rel="stylesheet" href="{% static 'contact.css' %}">
     <link rel="stylesheet" href="{% static 'home.css' %}">
-  
-    
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+    <link rel="stylesheet" href="{% static 'details.css' %}">
+
     {% endblock %}
 </head>
 <body>
     <!-- Header Section -->
     <header class="header">
-        <div class="container">
-            <h1 class="header-title">Wallez Properties</h1>
+        <div class="header-container">
+            <!-- Logo Section -->
+            <div class="logo-container">
+                <img src="{% static '/images/banner.jpg' %}" alt="Wallez Properties Logo" class="logo-image">
+            </div>
+            
+            <!-- Navigation Section -->
             <nav class="navigation">
+                <h1 class="header-title">Wallez  Homes & Properties</h1>
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>

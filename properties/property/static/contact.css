@@ -1,99 +1,165 @@
-/* contact.css */
+/* General Page Styles */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
 
-/* General styles for the contact page */
-.contact {
-    padding: 60px 0;
+.contact-us {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Title and Introduction */
+.contact-us h1 {
+  font-size: 36px;
+  color: #0077b6;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-us p {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* Contact Grid: Form and Info */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Contact Information Styling */
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0077b6;
+  padding-bottom: 10px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.contact-info ul li {
+  margin-bottom: 10px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-form h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #0077b6;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0077b6;
+  outline: none;
+  background-color: #fff;
+}
+
+.submit-button {
+  background-color: #0077b6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #005f8a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-grid {
+      flex-direction: column;
+      gap: 30px;
   }
-  
-  .contact-map {
-    margin-bottom: 30px;
+
+  .contact-us p {
+      font-size: 16px;
   }
-  
-  .intro-single {
-    padding: 80px 0;
+
+  .contact-info ul {
+      font-size: 16px;
   }
-  
-  .title-single {
-    font-size: 2.5rem;
-    font-weight: 600;
+
+  .contact-form h2,
+  .contact-info h2 {
+      font-size: 24px;
   }
-  
-  .title-single-box {
-    border-left: 3px solid #2eca6a;
-    padding-left: 20px;
+
+  .form-group input,
+  .form-group textarea {
+      font-size: 16px;
   }
-  
-  .breadcrumb-box {
-    margin-bottom: 20px;
-  }
-  
-  .form-a {
-    background-color: #f9f9f9;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .form-a .form-control {
-    border-radius: 0;
-  }
-  
-  .form-a .form-control-lg {
-    height: 50px;
-  }
-  
-  .btn-a {
-    background-color: #2eca6a;
-    color: #fff;
-    border-radius: 0;
-  }
-  
-  .btn-a:hover {
-    background-color: #26a356;
-  }
-  
-  .icon-box {
-    margin-bottom: 30px;
-  }
-  
-  .icon-box-icon {
-    font-size: 36px;
-    color: #2eca6a;
-  }
-  
-  .icon-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  
-  .socials-footer {
-    margin-top: 15px;
-  }
-  
-  .socials-footer .list-inline-item {
-    margin-right: 15px;
-  }
-  
-  .link-one {
-    color: #000;
-    transition: all 0.3s ease;
-  }
-  
-  .link-one:hover {
-    color: #2eca6a;
-  }
-  
-  @media (max-width: 768px) {
-    .intro-single {
-      padding: 60px 0;
-    }
-  
-    .title-single {
-      font-size: 2rem;
-    }
-  
-    .form-a {
-      padding: 20px;
-    }
-  }
-  
+}
+/* Map Section */
+.map-container {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.map-container h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Responsive Map */
+.map-container iframe {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
