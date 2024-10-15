@@ -63,6 +63,15 @@ body {
   margin-bottom: 10px;
 }
 
+.contact-info a {
+  color: #0077b6;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
 /* Contact Form Styling */
 .contact-form {
   flex: 1;
@@ -120,6 +129,39 @@ body {
   background-color: #005f8a;
 }
 
+/* Banner Section */
+.banner-section {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px; /* Reduced margin */
+}
+
+.banner-image {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Map Section */
+.map-container {
+  margin-top: 40px;
+  text-align: left;
+}
+
+.map-container h2 {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+/* Responsive Map */
+.map-container iframe {
+  max-width: 100%;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .contact-grid {
@@ -144,22 +186,8 @@ body {
   .form-group textarea {
       font-size: 16px;
   }
-}
-/* Map Section */
-.map-container {
-  margin-top: 40px;
-  text-align: left;
-}
 
-.map-container h2 {
-  font-size: 28px;
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-
-/* Responsive Map */
-.map-container iframe {
-  max-width: 100%;
-  border-radius: 6px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  .banner-image {
+      max-width: 100%; /* Ensure banner is responsive on smaller screens */
+  }
 }
