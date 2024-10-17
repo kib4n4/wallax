@@ -1,97 +1,145 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-  }
+/* General layout and container styles */
+.details-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.image-container {
+  position: relative;
+  width: 95%;
+}
+
+/* Property image styling */
+.property-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+/* Glassmorphism effect on the details section */
+.glass-effect {
   
-  .container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 20px 0;
-  }
-  
-  /* Header Section */
-  .header {
-    background: linear-gradient(145deg, #3df5cd, #1c695a);
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-  }
-  
-  .header-title {
-    font-size: 36px;
-    margin: 0;
-    letter-spacing: 2px;
-  }
-  
-  /* Main Content Section */
-  .main-content {
-    background-color: #fff;
-    padding: 40px 0;
-  }
-  
-  /* Property Details Container */
+  position: absolute;
+  top: 4px;
+  right: 0;
+  width: 30%; /* Occupies 30% of the image width */
+  height: 90%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background: linear-gradient(145deg, rgba(61, 245, 205, 0.3), rgba(28, 105, 90, 0.3)); /* Glass effect with gradient */
+  border: 2px solid rgba(240, 237, 237, 0.911);
+  border-radius: 0 10px 10px 0;
+  color: white;
+}
+
+/* Header section styling */
+.header {
+  background: linear-gradient(145deg, #3df5cd, #1c695a); /* Gradient background */
+  color: white; /* Text color for contrast */
+  padding: 20px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+/* Improved alignment and styling for the description */
+.description {
+  position: relative;
+  margin-top: 20px;
+  padding: 20px;
+  background: linear-gradient(145deg, #3df5cd, #1c695a);
+  color: white;
+  border-radius: 10px;
+  text-align: left;
+  z-index: 2; /* Ensure it is above the circular background */
+}
+
+/* Circular background for the details area */
+.details-content {
+  position: relative;
+}
+
+.details-background {
+  position: absolute;
+  top: -50px; /* Move it slightly upwards */
+  left: -50px; /* Move it slightly to the left */
+  width: 500px; /* Large circular background */
+  height: 500px;
+  background: rgba(61, 245, 205, 0.5); /* Semi-transparent green */
+  border-radius: 50%;
+  z-index: 1; /* Ensure it appears behind the details content */
+  overflow: hidden; /* To keep it from interfering with the rest */
+}
+
+/* Styling for headings and paragraphs in the description */
+.description h2 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.description p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button styling */
+.details-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3df5cd; /* Lighter green background for the buttons */
+  color: #1c695a; /* Darker text for contrast */
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.details-button:hover {
+  background: #1c695a; /* Hover effect with darker background */
+  color: #ffffff; /* White text on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .details-container {
-    display: flex;
-    gap: 30px; /* Adds space between image and details */
-    align-items: flex-start; /* Align items at the top */
+    flex-direction: column;
   }
-  
-  /* Image Section */
+
   .image-container {
-    flex: 1; /* Takes up one part of the space */
+    width: 100%;
   }
-  
-  .property-image {
-    width: 100%; /* Ensures image is responsive */
-    max-width: 500px; /* Limit maximum width */
-    height: auto;
+
+  .glass-effect {
+    position: relative;
+    width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
   }
-  
-  /* Details Section */
-  .details-content {
-    flex: 1.5; /* Takes up more space than the image */
+
+  /* Resize the circular background for smaller screens */
+  .details-background {
+    width: 300px;
+    height: 300px;
+    top: -30px;
+    left: -30px;
   }
-  
-  .details-content h2 {
-    font-size: 28px;
-    color: #333;
-    margin-bottom: 15px;
-  }
-  
-  .price, 
-  .location, 
-  .bedrooms {
-    font-size: 20px;
-    color: #555;
-    margin-bottom: 10px;
-  }
-  
-  /* Description Section */
-  .description h2 {
-    font-size: 24px;
-    margin-top: 30px;
-  }
-  
-  .description p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-  }
-  
-  /* Media Queries for Responsive Design */
-  @media (max-width: 768px) {
-    .details-container {
-        flex-direction: column; /* Stack image and details vertically on smaller screens */
-        gap: 20px;
-    }
-  
-    .property-image {
-        max-width: 100%; /* Ensure image takes full width */
-    }
-  }
-  
+}
+.inquiry-number{
+  background: linear-gradient(145deg, #3df5cd, #1c695a);
+  padding: 20px;
+  color:whitesmoke;
+  text-align: center;
+  border-radius: 4px;
+}

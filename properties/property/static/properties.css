@@ -1,0 +1,63 @@
+/* General container styling */
+.properties-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0px;
+}
+
+
+/* Marquee styling */
+.marquee {
+    overflow: hidden; /* Hide overflowing images */
+    white-space: nowrap; /* Prevent images from wrapping to the next line */
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Marquee content */
+.marquee-content {
+    display: inline-block;
+    animation: scroll 60s linear infinite; /* Apply infinite scroll animation */
+    will-change: transform; /* Optimize performance */
+}
+
+/* Duplicate the marquee content to create a seamless loop */
+.marquee-content::after {
+    content: '';
+    display: inline-block;
+    width: 100%; /* Duplicate the width of the content */
+}
+
+/* Marquee images */
+.marquee-image {
+    width: 550px; /* Set width for each image */
+    height: 500px; /* Set height for each image */
+    object-fit: cover; /* Ensure the image maintains aspect ratio */
+    margin-right: 20px; /* Space between images */
+    border-radius: 10px;
+    padding: 4px;
+    border: 3px solid white; /* Optional white border for image styling */
+    transition: transform 0.3s ease; /* Add a smooth hover effect */
+}
+
+.marquee-image:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}
+
+/* Marquee scrolling animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0); /* Start from the beginning */
+    }
+    100% {
+        transform: translateX(-50%); /* Move left by 50% of the content width */
+    }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .marquee-image {
+        width: 150px;
+        height: 100px;
+    }
+}

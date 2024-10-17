@@ -11,31 +11,36 @@
     <link rel="stylesheet" href="{% static 'home.css' %}">
     <link rel="stylesheet" href="{% static 'about.css' %}">
     <link rel="stylesheet" href="{% static 'details.css' %}">
-
+    <link rel="stylesheet" href="{% static 'properties.css' %}">
     {% endblock %}
 </head>
+<div>
+    
+</div>
 <body>
     <!-- Header Section -->
     <header class="header">
         <div class="header-container">
             <!-- Logo Section -->
             <div class="logo-container">
-                <img src="{% static '/images/banner.jpg' %}" alt="Wallez Properties Logo" class="logo-image">
+                <img src="{% static 'images/banner.jpg' %}" alt="Wallez Properties Logo" class="logo-image">
             </div>
             
             <!-- Navigation Section -->
             <nav class="navigation">
-                <h1 class="header-title">Wallez  Homes & Properties</h1>
+                <h1 class="header-title">Wallez Homes & Properties</h1>
+                <h2 class="services-list">| Homes | Houses | Rentals & BnBs'| Land | </h2>
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{% url 'properties' %}">Properties</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'properties_list' %}">Properties</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
                 </ul>
+               
             </nav>
         </div>
     </header>
-
+<div></div>
     <!-- Main Content Area -->
     <main class="main-content">
         <div class="container">

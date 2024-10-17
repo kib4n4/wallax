@@ -1,4 +1,29 @@
 {% extends 'base.html' %}
-{% load static%}
-{% block content%}
-{%endblock%}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'properties.css' %}">
+
+
+
+<div class="properties-container">
+    <!-- Property Listings Section with Marquee Effect -->
+    <h2 class="inquiry-number">Available Properties  </h2>
+   
+    
+    <!-- Marquee container for scrolling images -->
+    <div class="marquee">
+        <div class="marquee-content">
+            {% for listing in listings %}
+            <a href="{% url 'listing_retrieve' listing.id %}">
+                <img src="{{ listing.image.url }}" alt="{{ listing.title }}" class="marquee-image">
+            </a>
+            {% empty %}
+            <p>No properties available at the moment.</p>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<h2 class="inquiry-number"> call for enquiries: 0791305299</h2>
+
+{% endblock %}

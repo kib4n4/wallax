@@ -1,9 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
+ 
 }
 
 .container {
@@ -11,6 +9,7 @@ body {
   margin: 0 auto;
   padding: 20px 0;
 }
+
 
 /* Header */
 .header {
@@ -55,22 +54,67 @@ body {
   align-items: flex-end;
 }
 
+@keyframes slideInRight {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
 .header-title {
+  animation-name: slideInRight;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-delay: 0s;
+  animation-fill-mode: forwards; /* Changed to 'forwards' to keep the final state */
+  animation-iteration-count: 1;
+  animation-direction: normal; /* Changed to 'normal' to play the animation as intended */
   font-size: 40px; /* Adjusted title size */
   margin-bottom: 10px;
   letter-spacing: 1px;
+  transition: transform 0.5s; /* Smooth transition on hover */
+}
+
+.header-title:hover {
+  transform: translateX(300px); /* Keep it at the end position on hover */
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 100%, 80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
 }
 
 .nav-list {
   list-style: none;
   padding: 0;
+  padding-right: 10px;
   display: flex;
   gap: 15px;
+
+
 }
 
 .nav-item {
   margin: 0 15px;
+  animation-name: bounce;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
 }
+
+.nav-item:nth-child(1) { animation-delay: 0s; }
+.nav-item:nth-child(2) { animation-delay: 0.1s; }
+.nav-item:nth-child(3) { animation-delay: 0.2s; }
+.nav-item:nth-child(4) { animation-delay: 0.3s; }
 
 .nav-link {
   color: #fff;
@@ -83,12 +127,6 @@ body {
 .nav-link:hover {
   background: linear-gradient(135deg, hsl(210, 78%, 82%), rgb(95, 130, 165));
   border-radius: 5px;
-}
-
-/* Main Content */
-.main-content {
-  background-color: #fff;
-  padding: 40px 0;
 }
 
 /* Featured Properties */
@@ -113,6 +151,7 @@ body {
 
 .property-item {
   background-color: #fff;
+  opacity:80%;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -154,7 +193,8 @@ body {
 
 /* Why Choose Us Section */
 .why-choose-us {
-  background: linear-gradient(135deg, #ecf0f1, #bdc3c7);
+ /* background: linear-gradient(135deg, #ecf0f1, #bdc3c7);*/
+  background: linear-gradient(145deg, #3df5cd, #d9e2e0);
   padding: 40px;
   text-align: center;
 }
@@ -209,3 +249,34 @@ body {
       margin: 10px 0;
   }
 }
+/* General services list styling */
+.services-list {
+
+  color: whitesmoke;
+  position: static;
+  font-size: 16px;
+  
+  text-align: left;
+  margin-bottom: 0px;
+  font-family: 'Courier', monospace; /* Add monospace font to match typewriter effect */
+ 
+  overflow: hidden; /* Hide the overflowing text during the typing animation */
+  white-space: nowrap; /* Prevent text from wrapping */
+  border-right: 3px solid #208571; /* Cursor effect */
+  width: fit-content; /* Fit content width */
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end 1; /* Apply typing and caret animations */
+}
+
+/* Typing effect keyframes */
+@keyframes typing {
+  from { width: 0; } /* Start with no visible text */
+  to { width: 75%; } /* Expand to show all text */
+}
+
+/* Blinking caret effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent; } /* Hide the caret */
+  30% { border-color:#1c695a; } /* Show the caret at 50% of the cycle */
+}
+
+

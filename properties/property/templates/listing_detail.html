@@ -24,23 +24,28 @@
             <!-- Image Section -->
             <div class="image-container">
                 <img src="{{ listing.image.url }}" alt="{{ listing.title }}" class="property-image">
-            </div>
-
-            <!-- Details Section -->
-            <div class="details-content">
-                <h2>Details</h2>
-                <p class="price">Price: {{ listing.price }}</p>
-                <p class="location">Location: {{ listing.location }}</p>
-                <p class="bedrooms">Bedrooms: {{ listing.bedrooms }}</p>
-
-                <!-- Description Section -->
-                <div class="description">
-                    <h2>Description</h2>
-                    <p>{{ listing.description }}</p>
+                <!-- Glassmorphism Details Section -->
+                <div class="glass-effect">
+                 
+                    <!-- Description Section -->
+                    <div class="description">
+                        <h2>Details</h2>
+                        <!--add spacing to this elements and choose a royalish font style-->
+                        <div class ="spacing">
+                            <p class="price">Price: {{ listing.price }}</p>
+                            <p class="location">Location: {{ listing.location }}</p>
+                            <p class="bedrooms">Bedrooms: {{ listing.bedrooms }}</p>
+                        </div>
+                      
+    
+                        <h2>Description</h2>
+                        <p>{{ listing.description }}</p>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
+    <h2 class="inquiry-number"> call for enquiries: 0791305299</h2>
 </body>
 </html>
 {% endblock %}
