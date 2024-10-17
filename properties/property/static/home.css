@@ -36,6 +36,7 @@ body {
 
 /* Property Card */
 .property-card {
+    background:linear-gradient(145deg,white, #3df5cd);    
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -137,7 +138,7 @@ body {
 
 /* Why Choose Us Section */
 .why-choose-us {
-    background-color: #f8f9fa;
+    background:linear-gradient(145deg,white, #3df5cd);
     padding: 60px 20px;
     text-align: center;
     border-radius: 12px;

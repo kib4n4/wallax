@@ -1,7 +1,6 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
- 
 }
 
 .container {
@@ -10,101 +9,57 @@ body {
   padding: 20px 0;
 }
 
-
 /* Header */
 .header {
   background: linear-gradient(145deg, #3df5cd, #1c695a);
   color: #fff;
   padding: 20px 0;
+  text-align: center;
 }
 
 /* Flexbox container for header logo and navigation */
 .header-container {
   display: flex;
-  justify-content: space-between; /* Space between logo and nav */
-  align-items: center;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Align items in the center */
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Logo Section */
-.logo-container {
-  display: flex;
-  align-items: center;
-  padding-top: 8px;
-}
-
-.logo-image {
-  max-width: 150px; /* Adjusted logo size for better balance */
-  height: auto; /* Maintain aspect ratio */
-  margin-right: 20px;
-  border-radius: 10px; /* Adds a smooth border */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Luxurious shadow effect */
-  transition: transform 0.3s ease;
-}
-
-.logo-image:hover {
-  transform: scale(1.05); /* Slightly enlarges the logo on hover */
-}
-
-/* Navigation */
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-@keyframes slideInRight {
-  from {
-    transform: translateX(-300px);
-  }
-  to {
-    transform: translateX(0px);
-  }
-}
-
+/* Header title */
 .header-title {
+  text-align: center;
   animation-name: slideInRight;
   animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-delay: 0s;
-  animation-fill-mode: forwards; /* Changed to 'forwards' to keep the final state */
+  animation-fill-mode: forwards;
   animation-iteration-count: 1;
-  animation-direction: normal; /* Changed to 'normal' to play the animation as intended */
-  font-size: 40px; /* Adjusted title size */
+  font-size: 40px;
   margin-bottom: 10px;
   letter-spacing: 1px;
-  transition: transform 0.5s; /* Smooth transition on hover */
+  transition: transform 0.5s;
+  margin-left: 0; /* Remove margin left to center */
 }
 
 .header-title:hover {
-  transform: translateX(300px); /* Keep it at the end position on hover */
+  transform: translateX(10px); /* Slight translation on hover */
 }
 
-@keyframes bounce {
-  0%, 20%, 50%, 100%, 80% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-10px);
-  }
-}
 
+
+/* Navigation */
 .nav-list {
   list-style: none;
   padding: 0;
-  padding-right: 10px;
   display: flex;
   gap: 15px;
-
-
+  justify-content: center; /* Center the navigation items */
+  margin-top: 20px; /* Add some spacing below the services list */
 }
 
 .nav-item {
-  margin: 0 15px;
   animation-name: bounce;
   animation-duration: 3s;
   animation-fill-mode: forwards;
@@ -129,88 +84,57 @@ body {
   border-radius: 5px;
 }
 
-/* Featured Properties */
-.featured-properties {
-  margin-bottom: 40px;
+/* Keyframes */
+@keyframes slideInRight {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
-.section-title {
-  font-size: 32px;
-  color: #333;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: 700;
+@keyframes bounce {
+  0%, 20%, 50%, 100%, 80% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+/* Services list */
+.services-list {
+  text-align: center; /* Center the services list */
+  color: whitesmoke;
+  font-size: 16px;
+  margin-bottom: 0px;
+  font-family: 'Courier', monospace;
+  border-right: 3px solid #208571;
+  animation: typing 4s steps(40, Start), blink-caret 0.0005ms step-start infinite; /* Keyframe animations intact */
+  overflow: hidden; /* Hide overflow to create a typing effect */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-.property-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: space-around;
+/* Typing animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 45%; } /* Adjust this to fit your text */
 }
 
-.property-item {
-  background-color: #fff;
-  opacity:80%;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  width: calc(33.333% - 20px);
-  padding: 15px;
-  transition: transform 0.3s;
+/* Caret blinking animation */
+@keyframes blink-caret {
+  to, from { border-color: transparent; }
+  30% { border-color: #1c695a; }
 }
 
-.property-item:hover {
-  transform: scale(1.05);
-}
-
-.property-link {
-  text-decoration: none;
-  color: #333;
-}
-
-.property-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-.property-title {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #2980b9;
-}
-
-.property-price, 
-.property-location, 
-.property-bedrooms {
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 5px;
-}
-
-/* Why Choose Us Section */
-.why-choose-us {
- /* background: linear-gradient(135deg, #ecf0f1, #bdc3c7);*/
-  background: linear-gradient(145deg, #3df5cd, #d9e2e0);
-  padding: 40px;
-  text-align: center;
-}
-
-.description {
-  font-size: 18px;
-  color: #666;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, #2c3e50, #34495e);
-  color: #fff;
+  background:linear-gradient(145deg, #3df5cd,rgb(97, 94, 94));
+  color: #000000;
   padding: 20px 0;
   text-align: center;
 }
@@ -222,61 +146,30 @@ body {
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .property-item {
-      width: calc(50% - 20px);
+    width: calc(50% - 20px);
   }
 
   .header-container {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .logo-image {
-      margin-bottom: 15px; /* Add space when logo stacks above nav */
+  .nav-list {
+    justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .property-item {
-      width: 100%;
+    width: 100%;
   }
 
   .nav-list {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 
   .nav-item {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 }
-/* General services list styling */
-.services-list {
-
-  color: whitesmoke;
-  position: static;
-  font-size: 16px;
-  
-  text-align: left;
-  margin-bottom: 0px;
-  font-family: 'Courier', monospace; /* Add monospace font to match typewriter effect */
- 
-  overflow: hidden; /* Hide the overflowing text during the typing animation */
-  white-space: nowrap; /* Prevent text from wrapping */
-  border-right: 3px solid #208571; /* Cursor effect */
-  width: fit-content; /* Fit content width */
-  animation: typing 4s steps(40, end), blink-caret 0.75s step-end 1; /* Apply typing and caret animations */
-}
-
-/* Typing effect keyframes */
-@keyframes typing {
-  from { width: 0; } /* Start with no visible text */
-  to { width: 75%; } /* Expand to show all text */
-}
-
-/* Blinking caret effect */
-@keyframes blink-caret {
-  from, to { border-color: transparent; } /* Hide the caret */
-  30% { border-color:#1c695a; } /* Show the caret at 50% of the cycle */
-}
-
-

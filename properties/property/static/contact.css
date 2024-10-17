@@ -202,3 +202,15 @@ body {
       max-width: 100%; /* Ensure banner is responsive on smaller screens */
   }
 }
+.contact-head{
+ 
+  background: linear-gradient(145deg, #3df5cd, #1c695a);
+  padding: 40px;
+  border-radius: 8px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 0px;
+
+
+}
