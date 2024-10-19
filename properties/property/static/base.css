@@ -80,7 +80,7 @@ body {
 }
 
 .nav-link:hover {
-  background: linear-gradient(135deg, hsl(210, 78%, 82%), rgb(95, 130, 165));
+  background: linear-gradient(135deg, #e3e481, rgb(238, 163, 23));
   border-radius: 5px;
 }
 
@@ -108,7 +108,7 @@ body {
 /* Services list */
 .services-list {
   text-align: center; /* Center the services list */
-  color: whitesmoke;
+  color: #f3a71a;
   font-size: 16px;
   margin-bottom: 0px;
   font-family: 'Courier', monospace;
@@ -121,13 +121,13 @@ body {
 /* Typing animation */
 @keyframes typing {
   from { width: 0; }
-  to { width: 45%; } /* Adjust this to fit your text */
+  to { width: 40%; } /* Adjust this to fit your text */
 }
 
 /* Caret blinking animation */
 @keyframes blink-caret {
   to, from { border-color: transparent; }
-  30% { border-color: #1c695a; }
+  30% { border-color: transparent; }
 }
 
 

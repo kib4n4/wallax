@@ -49,9 +49,10 @@
   text-align: center;
 }
 
-.header-title {
+.header-title2 {
   font-size: 2.5em;
   font-weight: bold;
+  color: #f3a71a;
 }
 
 /* Improved alignment and styling for the description */
@@ -86,14 +87,18 @@
 /* Styling for headings and paragraphs in the description */
 .description h2 {
   font-size: 1.6em;
-  margin-bottom: 15px;
-  color: #ffffff;
+  margin-bottom: 5px;
+  color:#f3a71a ;
+  text-align: justify;
 }
 
 .description p {
+  background-color: #ffffff;
   font-size: 1.1em;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(45, 236, 195, 0.9);
+  padding: 8px;
+  border-radius: 4px;
 }
 
 /* Button styling */

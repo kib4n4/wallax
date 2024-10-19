@@ -122,12 +122,14 @@ body {
 /* Property Description (outside the card) */
 .property-description {
     padding-left: 0;
+    text-align: center;
 }
 
 .property-description h2 {
     font-size: 22px;
     color: #333;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .property-description p {
