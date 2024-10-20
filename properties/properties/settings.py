@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'property',
     'whitenoise.runserver_nostatic',  # Ensure Whitenoise runs with the server
+    
 ]
 
 MIDDLEWARE = [

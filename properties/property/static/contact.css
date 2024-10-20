@@ -214,3 +214,27 @@ body {
 
 
 }
+/*social icons styles*/
+.social-widgets {
+  display: flex; /* Arranges elements horizontally */
+  justify-content: center; /* Centers icons horizontally */
+  align-items: center; /* Vertically centers icons */
+  list-style: none; /* Removes default list styling */
+  padding: 0; /* Removes default padding */
+  margin: 0; /* Removes default margin */
+  background-color: #f5f5f5; /* Adds a background color for the container */
+  border-radius: 5px; /* Rounds the corners of the container */
+  padding: 10px; /* Adds padding around the icons */
+}
+.social-widgets a {
+  margin-right: 10px; /* Adds spacing between icons */
+  color: #333; /* Sets the icon color */
+  text-decoration: none; /* Removes underline from links */
+}
+.social-widgets a:hover {
+  color: #007bff; /* Changes icon color on hover */
+}
+.social-widgets i {
+  font-size: 24px; /* Adjust icon size as needed */
+  transition: color 0.3s ease; /* Adds a smooth transition for color change */
+}
