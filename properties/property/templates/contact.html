@@ -6,10 +6,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <div class="contact-us">
-    <div class= "contact-paragraph">
-        <h1 style=color:#f3a71a;margin-top:0px;>Contact   Wallez  Homes & Properties</h1>
-        <p >We'd love to hear from you! Whether you have questions about a property or need help with buying or selling, reach out to us, and we'll get back to you as soon as possible.</p>
-        
+    <div class="contact-paragraph">
+        <h1 style="color:#f3a71a; margin-top:0px;">Contact Wallez Homes & Properties</h1>
+        <p>We'd love to hear from you! Whether you have questions about a property or need help with buying or selling, reach out to us, and we'll get back to you as soon as possible.</p>
     </div>
   
     <div class="contact-grid">
@@ -17,9 +16,9 @@
         <div class="contact-info">
             <h2>Our Contact Information</h2>
             <ul>
-                <li><strong>Phone:</strong> +123 456 789</li>
-                <li><strong>Email:</strong> <a href="mailto:wallezhomes.p@gmail.com"></a>wallezhomes.p@gmail.com</li>
-                <li><strong>Address:</strong> 123 Real Estate Street, Property City, 12345</li>
+                <li><strong>Phone: </strong> +254111254883 , +254791305299</li>
+                <li><strong>Email:</strong> <a href="mailto:wallezhomes.p@gmail.com">wallezhomes.p@gmail.com</a></li>
+                
             </ul>
 
             <!-- Banner Image Directly Below Address -->
@@ -41,12 +40,21 @@
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" placeholder="Your Email" required>
                 </div>
+                <div class="form-group" style="display: none;"> <!-- Honeypot field -->
+                    <label for="honeypot">Leave this field empty:</label>
+                    <input type="text" id="honeypot" name="honeypot" placeholder="Leave this field empty">
+                </div>
                 <div class="form-group">
                     <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
                 </div>
                 <button type="submit" class="submit-button">Send Message</button>
             </form>
+
+            <!-- Messages to User -->
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
         </div>
     </div>
 
@@ -61,21 +69,6 @@
             allowfullscreen="" 
             loading="lazy">
         </iframe>
-    </div>
-<!--social widgets-->
-
-    <div class="social widgets">
-
-        <a href="https://www.facebook.com" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-          <a href="https://twitter.com" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://www.instagram.com"   
-           target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
     </div>
 </div>
 

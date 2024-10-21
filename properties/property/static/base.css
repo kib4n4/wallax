@@ -142,7 +142,7 @@ body {
 
 /* Footer */
 .footer {
-  background: linear-gradient(145deg, #3df5cd, rgb(97, 94, 94));
+  background: linear-gradient(145deg, #3df5cd, #d6b88c);
   color: #000000;
   padding: 20px 0;
   text-align: center;
@@ -181,4 +181,29 @@ body {
   .nav-item {
     margin: 10px 0;
   }
+}
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.social-links a {
+  margin: 0 15px; /* Space between icons */
+  font-size: 30px; /* Icon size */
+  color: #333; /* Dark color for icons */
+  text-decoration: none; /* Remove underline */
+  transition: transform 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.social-links .twitter-icon {
+  color: #060707; /* Twitter's brand color */
+}
+
+.social-links a:hover {
+  transform: scale(1.2); /* Slightly enlarge on hover */
+  color: #007bff; /* Change color on hover */
 }

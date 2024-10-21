@@ -28,7 +28,6 @@
             <!-- Navigation Section -->
             <nav class="navigation">
                 <h1 class="header-title">Wallez Homes & Properties</h1>
-                <h2 class="services-list">| Homes | Rentals & BnBs'| Land | </h2>
                 <ul class="nav-list">
                     <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
@@ -39,7 +38,9 @@
             </nav>
         </div>
     </header>
-<div></div>
+<div>
+    <h2 class="services-list">| Homes | Rentals & BnBs'| Land | </h2>
+</div>
     <!-- Main Content Area -->
     <main class="main-content">
         <div class="container">
@@ -54,19 +55,19 @@
         <div class="container">
             <p class="footer-text">&copy; 2024 Wallez Home & Properties. All rights reserved.</p>
         </div>
-        <div>
-           
+        <div class="social-links">
             <a href="https://www.facebook.com" target="_blank">
                 <i class="fab fa-facebook"></i>
-              </a>
-              <a href="https://twitter.com" target="_blank">
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a href="https://www.instagram.com"   
-               target="_blank">
+            </a>
+            <a href="https://twitter.com" target="_blank" class="twitter-icon">
+                <i class="fab fa-x"></i>
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
                 <i class="fab fa-instagram"></i>
-              </a>
-        </di>
+            </a>
+        </div>
+        
+        
     </footer>
 
     {% block extra_scripts %}
