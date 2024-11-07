@@ -2,18 +2,16 @@
 body {
   font-family: 'Arial', sans-serif;
   background-image: url("/static/images/image.png"); /* Ensure the path is correct */
-  background-size:contain; /* Ensures the image covers the entire background */
+  background-size: contain; /* Ensures the image covers the entire background */
   background-position: justify; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */
 }
-.box{
-  position: absolute;
-  width: 400px;
-  height: 300px;
-  margin: 0 auto;
-  border-radius: 50%;
-  overflow: hidden;
+
+.box {
+  flex: 0 0 auto; /* Prevent the box from growing */
+  margin-right: 200px; /* Space between logo and navigation */
 }
+
 .container {
   width: 90%;
   margin: 0 auto;
@@ -25,22 +23,26 @@ body {
   background: linear-gradient(145deg, #3df5cd, #1c695a);
   color: #fff;
   padding: 20px 0;
-  text-align: center;
 }
 
 /* Flexbox container for header logo and navigation */
 .header-container {
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  justify-content: center; /* Center items horizontally */
-  align-items: center; /* Align items in the center */
-  max-width: 1200px;
+  align-items: center; /* Align items vertically */
+  max-width: 1400px;
   margin: 0 auto;
+}
+
+/* Logo Section */
+.logo-placeholder {
+  max-width: 250px; /* Ensure the logo fits within its container */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 150px;
 }
 
 /* Header title */
 .header-title {
-  text-align: center;
+  text-align: left; /* Align title to the left */
   animation-name: slideInRight;
   animation-duration: 1s;
   animation-timing-function: ease-in;
@@ -48,10 +50,9 @@ body {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   font-size: 40px;
-  margin-bottom: 10px;
+  margin: 0; /* Remove default margin */
   letter-spacing: 1px;
   transition: transform 0.5s;
-  margin-left: 0; /* Remove margin left to center */
 }
 
 .header-title:hover {
@@ -64,7 +65,7 @@ body {
   padding: 0;
   display: flex;
   gap: 15px;
-  justify-content: center; /* Center the navigation items */
+  justify-content: flex-start; /* Align navigation items to the left */
   margin-top: 20px; /* Add some spacing below the services list */
 }
 
@@ -152,6 +153,65 @@ body {
   font-size: 16px;
 }
 
+/* Social Links */
+
+.section{
+  background: linear-gradient(145deg, #3df5cd, #1c695a);
+  color: #fff;
+  height: 36px;
+  width: 36px;
+  margin: 0px 7px 0px;
+  padding: 5px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  box-shadow: 5px 5px 8px rgba(0,0,0,0.9);
+  transition: width 300ms ease-in-out 0s, background-color 300ms linear 200ms;
+}
+
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  aspect-ratio: 1 / 1;
+}
+
+a{
+  text-decoration: none;
+}
+
+.section:hover{
+  width: 140px;
+  transition: width 300ms ease-in-out 0s, background-color 100ms linear 0s;
+}
+
+.section::after{
+  content: attr(tooltip);
+  margin-left: 10px;
+}
+
+.facebook:hover{
+  background: #3b5998;
+}
+
+.instagram:hover{
+  background: #3f729b;
+}
+
+.youtube:hover{
+  background: #cd201f;
+}
+
+.twitter:hover{
+  background: #55acee;
+}
+
+.github:hover{
+  background: #00405d;
+}
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .property-item {
@@ -181,29 +241,4 @@ body {
   .nav-item {
     margin: 10px 0;
   }
-}
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 4px;
-  border-radius: 15px; /* Rounded corners */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
-}
-
-.social-links a {
-  margin: 0 15px; /* Space between icons */
-  font-size: 30px; /* Icon size */
-  color: #333; /* Dark color for icons */
-  text-decoration: none; /* Remove underline */
-  transition: transform 0.3s, color 0.3s; /* Smooth transition */
-}
-
-.social-links .twitter-icon {
-  color: #060707; /* Twitter's brand color */
-}
-
-.social-links a:hover {
-  transform: scale(1.2); /* Slightly enlarge on hover */
-  color: #007bff; /* Change color on hover */
 }

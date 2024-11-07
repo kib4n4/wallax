@@ -13,6 +13,7 @@
     <title>{% block title %}Wallez Properties{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'base.css' %}">
     {% block extra_styles %}
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="{% static 'contact.css' %}">
     <link rel="stylesheet" href="{% static 'home.css' %}">
     <link rel="stylesheet" href="{% static 'about.css' %}">
@@ -28,7 +29,9 @@
     <header class="header">
         <div class="header-container">
             <!-- Logo Section -->
-          <div class="box"></div>
+            <div class="box">
+                <img src="{% static 'images/wallexlogo.png' %}" alt="Wallez Properties Logo" class="logo-placeholder">
+            </div>
             <!-- Navigation Section -->
             <nav class="navigation">
                 <h1 class="header-title">Wallez Homes & Properties</h1>
@@ -38,13 +41,12 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'properties_list' %}">Properties</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
                 </ul>
-               
             </nav>
         </div>
     </header>
-<div>
-    <h2 class="services-list">| Homes | Rentals & BnBs'| Land | </h2>
-</div>
+    <div>
+        <h2 class="services-list">| Homes | Rentals & BnBs'| Land | </h2>
+    </div>
     <!-- Main Content Area -->
     <main class="main-content">
         <div class="container">
@@ -61,19 +63,32 @@
             <p><strong>Phone:</strong> +254111254883</p>
             <p><strong>Email:</strong> <a href="mailto:wallezhomes.p@gmail.com">wallezhomes.p@gmail.com</a></p>
         </div>
-        <div class="social-links">
-            <a href="https://www.facebook.com" target="_blank">
-                <i class="fab fa-facebook"></i>
+       
+        <div class="container">
+            <a href="#">
+                <div class="section facebook" tooltip="Facebook">
+                    <div class="icon">
+                        <i class="fab fa-facebook-f fa-lg"></i>
+                    </div>
+                </div>
             </a>
-            <a href="https://twitter.com" target="_blank" class="twitter-icon">
-                <i class="fab fa-x"></i>
+            <a href="#">
+                <div class="section instagram" tooltip="Instagram">
+                    <div class="icon">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </div>
+                </div>
             </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
+           
+            <a href="#">
+                <div class="section twitter" tooltip="Twitter">
+                    <div class="icon">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </div>
+                </div>
             </a>
+           
         </div>
-        
-        
     </footer>
 
     {% block extra_scripts %}
