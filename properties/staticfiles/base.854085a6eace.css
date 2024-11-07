@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: 'Arial', sans-serif;
-  background-image: url("/static/images/image.png"); /* Ensure the path is correct */
+  background-image: url("/static/images/image.792c86a9ddc4.png"); /* Ensure the path is correct */
   background-size: contain; /* Ensures the image covers the entire background */
   background-position: justify; /* Centers the image */
   background-repeat: no-repeat; /* Prevents the image from repeating */

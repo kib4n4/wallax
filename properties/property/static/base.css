@@ -201,17 +201,11 @@ a{
   background: #3f729b;
 }
 
-.youtube:hover{
-  background: #cd201f;
-}
-
 .twitter:hover{
   background: #55acee;
 }
 
-.github:hover{
-  background: #00405d;
-}
+
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
   .property-item {
