@@ -9,13 +9,13 @@ body {
 
 .box {
   flex: 0 0 auto; /* Prevent the box from growing */
-  margin-right: 200px; /* Space between logo and navigation */
+  margin-right: 100px; /* Space between logo and navigation */
 }
 
 .container {
   width: 90%;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 0px 0;
 }
 
 /* Header */
@@ -37,7 +37,8 @@ body {
 .logo-placeholder {
   max-width: 250px; /* Ensure the logo fits within its container */
   height: auto; /* Maintain aspect ratio */
-  border-radius: 150px;
+ 
+
 }
 
 /* Header title */
